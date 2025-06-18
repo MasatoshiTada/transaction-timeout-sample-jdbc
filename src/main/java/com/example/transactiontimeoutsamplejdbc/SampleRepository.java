@@ -19,7 +19,10 @@ public class SampleRepository {
   }
 
   public Object sleep(int seconds) {
+    // PostgreSQL
     return jdbcTemplate.queryForObject("SELECT pg_sleep(?)", new Object[]{seconds}, Object.class);
+    // MySQL
+//    return jdbcTemplate.queryForObject("SELECT sleep(?)", new Object[]{seconds}, Object.class);
   }
 
   public void insert(Sample sample) {
