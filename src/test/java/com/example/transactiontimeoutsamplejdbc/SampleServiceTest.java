@@ -27,7 +27,7 @@ public class SampleServiceTest {
   @DisplayName("registerWithSleep()")
   class RegisterWithSleepTest {
     @Test
-    @DisplayName("TransactionTimedOutException in 2 seconds")
+    @DisplayName("DataAccessResourceFailureException in 2 seconds")
     void sleep3() {
       long startTime = System.currentTimeMillis();
       DataAccessResourceFailureException exception = assertThrows(
